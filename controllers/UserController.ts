@@ -5,10 +5,7 @@ import { type Request, type Response } from "express";
 
 export default class UserController {
 
-    constructor () {
-        
-    }
-
+  
     public async getAllUsers(req: Request, res: Response): Promise<User[]> {
         const users = await User.findAll()
 

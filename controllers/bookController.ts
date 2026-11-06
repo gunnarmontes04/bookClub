@@ -10,6 +10,7 @@ export default class BookController {
     public async postBook(req: Request) {
         return await Book.create(req.body)
     }
+    
     public async getBookById(req: Request<{bookId: number}>) {
         return await Book.findAll({
             where: {
